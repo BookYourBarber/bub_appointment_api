@@ -1,15 +1,13 @@
 const router = require("express").Router()
 
-router.get("/", async (req,res) =>{
+const appointment = [{
+    appointment_id: 1,
+    timeslot_id: 1,
+    customer_id: 1
+}]
+
+router.post("/bookanappointment", async (req,res) =>{
     
-    const appointment = {
-        Time: 12312,
-        Name: "sdads"
-    }
-
-    // const appointmentTime = appointment.Time
-
-    return res.json(appointment)
 })
 
 
