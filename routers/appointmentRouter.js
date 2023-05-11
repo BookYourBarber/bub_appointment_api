@@ -6,8 +6,12 @@ const appointments = [{
     appointment_id: 1,
     timeslot_id: 1,
     customer_id: 1
-}
-]
+}]
+
+router.get("/", async (req, res)=>{
+    return res.json(appointments)
+})
+
 
 router.post("/", async (req,res) =>{
     
@@ -26,7 +30,7 @@ router.post("/", async (req,res) =>{
         const maxAppointmentObject = appointments.reduce((prev, current) => {
             return (prev.appointment_id > current.appointment_id) ? prev : current;
         });
-
+        console.log(maxAppointmentObject)
         const maxAppointmentId = maxAppointmentObject.appointment_id
 
         // console.log(maxAppointmentId)
