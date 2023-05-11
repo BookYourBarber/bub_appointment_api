@@ -1,4 +1,4 @@
-name: CI 
+name: CI / CD
 
 on:
   push:
@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get code
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: Install dependencies
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 18
       - name: Install ci
       - run: npm ci
       - name: Run tests
