@@ -1,5 +1,8 @@
 const app = require('./app')
+const db = require('./models')
 
-app.listen(5003, () => {
-  console.log('Server started on port 5003');
-});
+db.sequelize.sync().then((req) =>{
+  app.listen(5003, () => {
+    console.log('Server started on port 5003');
+  });
+})
