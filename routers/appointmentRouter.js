@@ -1,14 +1,6 @@
 const router = require("express").Router()
 
 const db = require("../models")
-// const {makeAnAppointment} = require("../utils")
-
-
-// const appointments = [{
-//     appointment_id: 1,
-//     timeslot_id: 1,
-//     customer_id: 1
-// }]
 
 //create an appointment
 router.post("/", async(req,res)=>{
@@ -41,9 +33,8 @@ router.post("/", async(req,res)=>{
 router.get("/:id", async (req, res)=>{
 
     const id = req.params.id
-
-
     let appointment;
+
     try {
         appointment = await db.Appointment.findByPk(id);
     }catch(err){
