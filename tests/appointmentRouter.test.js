@@ -103,7 +103,7 @@ describe("Get an appointment by id", () => {
 })
 
 describe('Get all appointments', () => {
-  it('should return an object of the appointment', async () =>{
+  it('should return an object of appointments', async () =>{
     
     const appointment = {
       "timeslot_id": 1,
